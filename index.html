@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading1">Welcome Page</h1> 
+    <div class="btn-center">
+        <button id="login-btn" onclick="openLogInForm()">Login</button>
+        <button id="signup-btn" onclick="openSignUpForm()">Sign Up</button>
+    </div>
+
+    <div class="form-div">
+        <form action="" class="form-container" id="login">
+            <h1 class="heading2">Login</h1>
+            <label for="email"><b>Email</b></label> <br>
+            <input type="text" placeholder="Enter Email" class="login-email" required> <br>
+
+            <label for="password" class="pass-lebel"><b>Password</b></label><br>
+            <input type="password" placeholder="Enter Password" class="login-password" required> <br>
+
+            <div class="btn">
+                <button class="submit-btn" onclick="login()">Login</button>
+                <button class="cancle-btn" onclick="cancel()">Cancel</button>
+            </div>
+
+        </form>
+   </div>
+    <div class="form-div signup-div">
+        <form action="#" class="form-container" id="signup"><!-- onclick="event.preventDefault();-->
+            <h1>Register</h1>
+
+            <label for="fName"><b>First Name</b></label>
+            <input type="text" placeholder="Frist Name" class="fName" id="fName" required autocomplete="off">
+            <p id="err-fname" class="err"></p>
+
+
+            <label for="lName"><b>Last Name</b></label>
+            <input type="text" placeholder="Last Name" class="lName" id="lName" required autocomplete="off">
+            <p id="err-lname" class="err"></p>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" class="email" id="email" required autocomplete="off">
+            <p id="err-email" class="err"> </p>
+
+            <label for="pnoneNo"><b>Phone</b></label>
+            <input type="text" placeholder="Enter PhoneNo" class="phoneNo" id="phoneNo" required autocomplete="off">
+            <p id="err-phoneNo" class="err"></p>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" class="password" id="password" required
+                autocomplete="off">
+            <p id="err-password" class="err"></p>
+
+            <label for="confirmPassword"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" class="confirmPassword" id="confirmPassword" required
+                autocomplete="off">
+            <p id="err-confirmPassword" class="err"></p>
+
+            <div class="btn">
+                <button type="button" id="entry" class="submit-btn" onclick="validation()" onclick="onClickSubmit()">Sign Up</button>
+                <button type="button" class="cancle-btn" onclick="cancelForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <table id="userList" class="list">
+        <caption>Client List</caption>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Number</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Password</th>
+                <th>Action</th>
+                <!--<th>Action</th>-->
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
